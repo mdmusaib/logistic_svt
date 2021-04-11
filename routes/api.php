@@ -18,6 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::middleware('auth:api')
+->get('/user', function(Request $request) {    
+return $request->user();
+});
+
+Route::post('login','UserController@login');
+
 Route::get('customers','CustomerDetailController@index');
 Route::post('customers/create','CustomerDetailController@create');
 Route::get('getBookings','BookingController@index');
@@ -31,3 +38,6 @@ Route::post('updateVehicle','VehicleController@update');
 Route::post('uploadFile','VehicleController@uploadFile');
 
 Route::get('getImages','VehicleController@getImages');
+
+// return Redirect::to($url);
+
