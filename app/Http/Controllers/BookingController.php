@@ -22,7 +22,7 @@ class BookingController extends Controller
         // $isVehicleExists=Vehicle::where('vehicle_no', $vehicles->vehicle_no)->first();
         
             foreach ($vehicle_data as $vehicles) {
-                return $vehicles;
+                // return $vehicles;
                 // return $request->file('images');
                 $newVehicle=new Vehicle();
                 $newVehicle->fill([
