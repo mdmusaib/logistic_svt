@@ -22,32 +22,32 @@ class BookingController extends Controller
         // $isVehicleExists=Vehicle::where('vehicle_no', $vehicles->vehicle_no)->first();
         
             foreach ($vehicle_data as $vehicles) {
-                // return $vehicles;
+                
                 // return $request->file('images');
                 $newVehicle=new Vehicle();
                 $newVehicle->fill([
-                    "vehicle_no"=>$vehicles->vehicle_no,
-                    "from_loc"=>$vehicles->from_loc,
-                    "to_loc"=>$vehicles->to_loc,
-                    'dc_no'=>$vehicles->dc_no,
-                    "material"=>$vehicles->material,
-                    "party_name"=>$vehicles->party_name,
-                    "rate"=>$vehicles->rate,
-                    "weight"=>$vehicles->weight,
-                    'gst'=>$vehicles->gst,
-                    'payment_type'=>$vehicles->payment_type,
-                    'diesel_rt'=>$vehicles->diesel_rt,
-                    'loading_quantity'=>$vehicles->loading_quantity,
-                    'accepted_quantity'=>$vehicles->accepted_quantity,
-                    'logistic_rent'=>$vehicles->logistic_rent,
-                    'lead'=>$vehicles->lead,
-                    'date'=>$vehicles->date,
-                    'puc'=>$vehicles->puc,
-                    "scale"=>$vehicles->scale,
-                    "total_amount"=>$vehicles->total_amount,
-                    "expences"=>$vehicles->expences,
-                    "driver_name"=>$vehicles->driver_name,
-                    "profit"=>$vehicles->profit
+                    "vehicle_no"=>$vehicles["vehicle_no"],
+                    "from_loc"=>$vehicles["from_loc"],
+                    "to_loc"=>$vehicles["to_loc"],
+                    'dc_no'=>$vehicles["dc_no"],
+                    "material"=>$vehicles["material"],
+                    "party_name"=>$vehicles["party_name"],
+                    "rate"=>$vehicles["rate"],
+                    "weight"=>$vehicles["weight"],
+                    'gst'=>$vehicles["gst"],
+                    'payment_type'=>$vehicles["payment_type"],
+                    'diesel_rt'=>$vehicles["diesel_rt"],
+                    'loading_quantity'=>$vehicles["loading_quantity"],
+                    'accepted_quantity'=>$vehicles["accepted_quantity"],
+                    'logistic_rent'=>$vehicles["logistic_rent"],
+                    'lead'=>$vehicles["lead"],
+                    'date'=>$vehicles["date"],
+                    'puc'=>$vehicles["puc"],
+                    "scale"=>$vehicles["scale"],
+                    "total_amount"=>$vehicles["total_amount"],
+                    "expences"=>$vehicles["expences"],
+                    "driver_name"=>$vehicles["driver_name"],
+                    "profit"=>$vehicles["profit"]
                 ]);
                 $newVehicle->save();
             }
