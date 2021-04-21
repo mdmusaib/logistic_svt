@@ -38,6 +38,8 @@ Route::post('updateVehicle','VehicleController@update');
 Route::post('uploadFile','VehicleController@uploadFile');
 
 Route::get('getImages','VehicleController@getImages');
+Route::get('getCustomerDetails','CustomerDetailController@getCustomerDetails');
+
 
 // return Redirect::to($url);
 

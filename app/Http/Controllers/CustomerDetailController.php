@@ -16,4 +16,8 @@ class CustomerDetailController extends Controller
         $getAll=CustomerDetails::all();
             return $getAll;
     }
+    public function getCustomerDetails(Request $request){
+        $getAll=CustomerDetails::all();
+            return $getAll;
+    }
 }
